@@ -1,0 +1,146 @@
+/* * {
+  border: solid 1px black;
+} */
+
+/* * {
+  box-sizing: border-box;
+  position: relative;
+} */
+
+body {
+  /* background-color: #7c919d; */
+  background-color: #080e15;
+  color: white;
+  width: 100%;
+}
+
+header {
+  /* background-color: #222233; */
+  background-color:#242e3e;
+  /* color: #aaccff; */
+  color: #ffffff;
+}
+
+.container-full-width {
+  width: 100%;
+}
+
+.header {
+  margin: 16px 0;
+}
+
+#header-left {
+  height: 100%;
+}
+
+#header-left p {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+#clock {
+  height: 100%;
+}
+
+h3 {
+  margin: 8px 0 0 0;
+}
+
+#header-right {
+  /* padding: 12px 0px 12px 0px; */
+  height: 100%;
+}
+
+@font-face {
+  font-family: "My Custom Font";
+  /* src: url(http://www.example.org/mycustomfont.ttf) format("truetype"); */
+  src: url(alarm_clock.ttf) format("truetype");
+}
+
+#header-right p {
+  color: #337ed2;
+  font-size: 4.5em;
+  font-family: "My Custom Font", Verdana, Tahoma;
+}
+
+#timer {
+  height: 100%;
+  margin: 0;
+}
+
+/* #header {
+  height: 200px;
+} */
+
+/* #header-left, #header-right {
+  position: absolute;
+  width: 185px;
+} */
+
+/* #header-left {
+  left: 0;
+}
+
+#header-right {
+  right: 0;
+} */
+
+/* #header-mid {
+  width: calc(100% - 185px - 185px);
+  left: 185px;
+} */
+
+#logo {
+  width: 100%;
+  filter: invert(100%);
+}
+
+/* .row {
+  margin: 0;
+} */
+
+.container-fluid {
+  margin-top: 12px; /* TODO!!!! */
+}
+
+/* TODO: also check for async as fast reloading will not show proper timer size and plcaement */
+
+.sm-gutters>.col, .sm-gutters>[class*=col-] {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+table {
+  /* background-color: #222233; */
+  background-color: #171f29;
+  color: #aaccff;
+}
+
+#table-header {
+  background-color: #1f2638;
+}
+
+.table {
+  color: #fff;  /* visible separator is a Chrome bug */
+}
+
+/* #chart-container {
+  border-color: #363c4e;
+} */
+
+canvas {
+  /* background-color: #222233; */
+  background-color: #171b26;
+  /* background-color: #181c27; */
+  /* border: solid 2px black; */
+  border: solid 1px #363c4e;
+}
+
+#myChart1 {
+  margin-bottom: 12px;
+}
+
+footer p {
+  padding-left: 12px;
+  padding-right: 12px;
+}
