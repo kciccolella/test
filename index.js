@@ -1,5 +1,10 @@
 "use strict";
 
+// TODOS: Adjust screen proportions (800x600 maybe?)
+//        Adjust table header sizing
+//        Change position of timer
+//        Remove second chart
+
 (() => {
   const COCKTAILS = {
     1: {
@@ -66,7 +71,7 @@
   populateDOM(cocktailInfoMap);
 
   chart1 = createChart1();
-  chart2 = createChart2();
+  // chart2 = createChart2();
 
   updateFrequency(timerIncrement.minutes, timerIncrement.seconds);
 
@@ -76,15 +81,15 @@
     updateChart(chart1, dataset => {
       dataset.data = Object.values(cocktailInfoMap).map(el => el.currentPrice);
     });
-    updateChart(chart2, dataset => {
-      if (dataset.label === 'Current Price') {
-        dataset.data = Object.values(cocktailInfoMap).map(el => el.currentPrice);
-      }
+    // updateChart(chart2, dataset => {
+    //   if (dataset.label === 'Current Price') {
+    //     dataset.data = Object.values(cocktailInfoMap).map(el => el.currentPrice);
+    //   }
 
-      if (dataset.label === 'Previous Price') {
-        dataset.data = Object.values(cocktailInfoMap).map(el => el.previousPrice);
-      }
-    });
+    //   if (dataset.label === 'Previous Price') {
+    //     dataset.data = Object.values(cocktailInfoMap).map(el => el.previousPrice);
+    //   }
+    // });
   }
 
   function updateChart(chart, callback) {
@@ -331,6 +336,8 @@
         }]
       },
       options: {
+        maintainAspectRatio: false,
+        responsive: true,
         scales: {
           x: {
             ticks: {
