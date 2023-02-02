@@ -27,7 +27,8 @@ header .container-fluid {
 
 #header-left p {
   margin: 0;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
+  font-size: 1.88vw;
 }
 
 #clock {
@@ -69,10 +70,10 @@ h3 {
 
 /* TODO: also check for async as fast reloading will not show proper timer size and plcaement */
 
-.sm-gutters>.col, .sm-gutters>[class*=col-] {
+/* .sm-gutters>.col, .sm-gutters>[class*=col-] {
   padding-left: 6px;
   padding-right: 6px;
-}
+} */
 
 table {
   background-color: #171f29;
@@ -88,7 +89,11 @@ table {
   /* margin: 0; */
 }
 
-.col-3 .row {
+/* .col-12 .row {
+  height: 100%;
+} */
+
+#sidepanel { /* change this */
   height: 100%;
 }
 
@@ -99,7 +104,8 @@ table {
 
 #timer-container p {
   color: #337ed2;
-  font-size: 4.5em;
+  /* font-size: 4.5em; */
+  font-size: 6vw;
   font-family: "My Custom Font", Verdana, Tahoma;
 }
 
@@ -116,6 +122,24 @@ table {
   padding-right: 0;
   /* padding-bottom: 16px; */
   padding-bottom: 8px;
+}
+
+/* @include media-breakpoint-down(sm) {
+  #chart-container-1 {
+    padding-left: 8px;
+  }
+} */
+
+@media (max-width: 767.98px) {
+  #timer-container {
+    height: auto;
+  }
+
+  #chart-container-1 {
+    padding-left: 8px;
+    height:auto;
+    padding-bottom: 0;
+  }
 }
 
 canvas {
