@@ -1,9 +1,7 @@
 "use strict";
 
-// TODOS: Adjust screen proportions (800x600 maybe?)
-//        Adjust table header sizing
-//        Change position of timer
-//        Remove second chart
+// TODOS: Adjust table header sizing
+//        Fix sidepanel to stay full screen on md and up
 
 (() => {
   const COCKTAILS = {
@@ -186,6 +184,10 @@
               if (cocktailMap[i][j] === '\u25bc') {
                 cell.setAttribute("class", "text-end text-success");
               }
+            } else if (j === 'diffLastPricePercent' ||
+                       j === 'diffTotal' ||
+                       j === 'diffTotalRoundedPercent') {
+              cell.setAttribute("class", "text-end d-none d-sm-table-cell");
             } else {
               cell.setAttribute("class", "text-end");
             }
